@@ -1,0 +1,25 @@
+﻿@page "/Accordians"
+@inject HttpClient Http
+
+<h1>Here are some cool accordians</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+<img src="@imageURL1" width="500">
+<input id="Button1" type="button" value="Click to show more stuff" @onclick="click" />
+@if (show == true)
+{
+    <Accordata></Accordata>
+
+}
+
+@code
+{
+    string imageURL1 = "https://images.samash.com/sa/H13/H1305XXX3-P.fpx?cvt=jpg";
+    bool show = false;
+
+    private void click(MouseEventArgs e)
+    {
+        show = true;
+        StateHasChanged();
+    }
+}

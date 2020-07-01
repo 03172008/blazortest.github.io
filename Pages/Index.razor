@@ -1,0 +1,21 @@
+﻿@page "/"
+
+<h1>Hello, world! @xyz</h1>
+<input @bind="xyz" />
+
+Welcome to your new app. @count;
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code
+{
+
+    string xyz = "Tarushv";
+    int count = 100;
+
+    protected override void OnInitialized()
+    {
+        count = count * 2;
+    }
+
+}
